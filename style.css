@@ -1,0 +1,144 @@
+body {
+  background-color: rgba(255, 255, 255);
+}
+header {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+.logo {
+  position: relative;
+  left: 22px;
+}
+main, footer div{
+    display: grid;
+    place-content: center;
+}
+
+.contenedor{
+    display: grid;
+    background-color: rgb(247, 247, 243);
+    width: max-content;
+    height: max-content;
+    border-radius: 3px;
+
+    box-shadow: 3px 0px 5px 1px rgba(235, 232, 232, 0.829), 
+    -1px 0px 5px 1px rgba(235, 232, 232, 0.829);
+    
+    
+  grid-template-areas: 
+    "texto rectangulo rectangulo rectangulo"
+    "texto rectangulo rectangulo rectangulo"
+    "texto rectangulo rectangulo rectangulo";
+    
+}
+
+.c_texto {
+  grid-area: texto;
+  width: min-content;
+}
+#texto {
+  border-style: none;
+  outline: none;
+  font-size: 20px;
+  resize: none;
+  color: rgba(10, 56, 113, 1);
+  background-color: rgb(247, 247, 243);
+  width: auto;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.rectangulo {
+  grid-area: rectangulo;
+  background-color: rgba(255, 255, 255);
+  background-image: url(imagenes/Muñeco.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  border-left: 2.3px solid rgba(219, 219, 219, 0.347);
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(71, 71, 71);
+  width: 500px;
+  height: auto;
+  overflow-y: scroll;
+  
+  
+}
+.mensaje{
+    word-wrap: break-word;
+    position: relative;
+    top: 15%;
+
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 150px;
+  }
+  
+  .boton_encriptado,
+  .boton_desincriptado {
+    background: rgba(10, 56, 113, 1);
+    padding: 5px 25px;
+    margin-left: 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    width: max-content;
+  }
+  .boton_encriptado:hover,
+  .boton_desincriptado:hover {
+    color: white;
+  }
+  .advertencia {
+    margin-top: 5px;
+    padding-top: 0.2px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 1.8px;
+  }
+
+
+  @media  screen and (max-width: 450px) {
+    .contenedor{
+        grid-template-areas: 
+    "texto"
+    "texto"
+    "texto"
+    "rectangulo"
+    "rectangulo";
+    margin-bottom: 10px;
+    border-bottom: 2px solid gray;
+    }
+
+    .rectangulo{
+        height: 300px;
+        width: 400px;
+        padding: 10px;
+    }
+    .c_texto {
+        grid-area: texto;
+        width: min-content;
+      }
+      #texto {
+        border-style: none;
+        outline: none;
+        font-size: 20px;
+        resize: none;
+        color: rgba(10, 56, 113, 1);
+        background-color: rgb(247, 247, 243);
+        width: 400px
+      }
+      footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: 9px;
+        gap: 2px;
+      }
+
+  }

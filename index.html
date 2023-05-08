@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>encriptador</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="imagenes/Vector.png" alt="logo" class="logo" />
+    </header>
+    <main>
+      <div class="contenedor">
+        <div class="c_texto">
+            <textarea
+          name="texto"
+          id="texto"
+          cols="65"
+          rows="23"
+          placeholder="texto a ingresar"
+        ></textarea>
+        </div>
+        <div class="rectangulo">
+          <p class="mensaje">no hay ningun mensaje</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="advertencia">
+        <img
+          src="imagenes/bi_exclamation-circle-fill.png"
+          alt=""
+          class="advertencia-img"
+        />
+        solo se acepta minusculas
+      </p>
+      <div class="boton_encriptado">encriptar</div>
+      <div class="boton_desincriptado">desencriptar</div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
